@@ -10,29 +10,228 @@
 	  <p>
 	   there's a new kid here learning to code
 	   <div class="menu pilihan">
-		/ * Reset dasar untuk konsistensi */
+	<Style>
+	// =========================
+// 🎨 Tema: Black-Pink Neon
+// =========================
+
+// Warna dasar
+$bg: #07060b;
+$surface: #0e0d13;
+$pink-neon: #ff00aa;
+$pink-glow: #ff66cc;
+$purple-neon: #b300ff;
+$muted: #a1a1b5;
+$white: #ffffff;
+
+// Elemen global
+$radius: 12px;
+$shadow: 0 0 25px rgba(255, 0, 170, 0.3);
+$transition: 0.25s cubic-bezier(.25, .8, .25, 1);
+
+// Efek neon glow helper
+@mixin glow($color, $blur: 18px) {
+  box-shadow: 0 0 $blur $color, inset 0 0 ($blur / 2) rgba($color, 0.6);
+}
+
+// Reset & base
 * {
-    margin: 50px;
-    padding: 40px;
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
-/* Body utama */
+html, body {
+  height: 100%;
+}
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
+  margin: 0;
+  background: radial-gradient(circle at top left, #0b0010, $bg 80%);
+  color: $white;
+  font-family: 'Poppins', system-ui, sans-serif;
+  line-height: 1.5;
+  padding: 2rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+// Container
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+// Navbar
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.2rem;
+  border-radius: 999px;
+  background: rgba(255, 0, 170, 0.08);
+  backdrop-filter: blur(8px);
+  box-shadow: $shadow;
+
+  .brand {
     display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 700;
+  }
+
+  .logo {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, $pink-neon, $purple-neon);
+    @include glow($pink-neon, 20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+  }
+}
+
+// Hero section
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 2rem;
+  margin-top: 2rem;
+
+  .hero-card {
+    background: linear-gradient(180deg, rgba(255, 0, 170, 0.05), transparent);
+    border-radius: $radius;
+    padding: 2rem;
+    box-shadow: $shadow;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+
+    h1 {
+      margin: 0 0 .5rem 0;
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      text-shadow: 0 0 12px rgba(255, 0, 170, 0.6);
+    }
+
+    p {
+      color: $muted;
+      margin: 0 0 1.25rem 0;
+    }
+  }
+}
+
+// Tombol
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  transition: transform $transition, box-shadow $transition;
+
+  &:active {
+    transform: scale(0.97);
+  }
+
+  &--primary {
+    background: linear-gradient(90deg, $pink-neon, $pink-glow);
+    color: $white;
+    @include glow($pink-glow, 20px);
+
+    &:hover {
+      @include glow($pink-neon, 25px);
+    }
+  }
+
+  &--ghost {
+    background: transparent;
+    color: $pink-glow;
+    border: 1px solid rgba(255, 0, 170, 0.4);
+    &:hover {
+      background: rgba(255, 0, 170, 0.08);
+      @include glow($pink-neon, 10px);
+    }
+  }
+}
+
+// Card & grid
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+  border-radius: $radius;
+  padding: 1rem;
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: transform $transition, box-shadow $transition;
+
+  &:hover {
+    transform: translateY(-5px);
+    @include glow($pink-glow, 15px);
+  }
+
+  h4 {
+    color: $pink-glow;
+    text-shadow: 0 0 10px rgba(255, 102, 204, 0.8);
+  }
+}
+
+// Input & form
+.form {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.input {
+  background: $surface;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.55rem 0.75rem;
+  border-radius: 8px;
+  color: $white;
+  outline: none;
+  transition: box-shadow $transition, border-color $transition;
+
+  &:focus {
+    border-color: $pink-neon;
+    @include glow($pink-neon, 12px);
+  }
+}
+
+// Badge
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(255, 0, 170, 0.3), rgba(179, 0, 255, 0.25));
+  color: $white;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-shadow: 0 0 6px rgba(255, 0, 170, 0.8);
+}
+
+// Footer
+.footer {
+  margin-top: 3rem;
+  text-align: center;
+  color: $muted;
+  font-size: 0.95rem;
+}
+
+// Responsive
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .nav {
     flex-direction: column;
-    min-height: 100vh;
-}
-/* Header */
-header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
-}
+    gap: 0.6rem;
+  }
+}</Style>
 
 
 	    <ul>
