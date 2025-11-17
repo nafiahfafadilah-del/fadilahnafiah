@@ -4,21 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Latihan Table - Nilai UAS IPA X TI</title>
-    <!-- Menggunakan Google Fonts untuk font yang elegan -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        /* Reset dasar untuk konsistensi */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Body dengan background hitam dengan sedikit terang (gradien abu-abu terang) */
         body {
-            font-family: 'Poppins', sans-serif; /* Font modern dan mudah dibaca */
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #404040 100%); /* Gradien hitam ke abu-abu terang */
-            color: #ffffff; /* Teks putih untuk kontras */
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #404040 100%);
+            color: #ffffff;
             padding: 20px;
             min-height: 100vh;
             display: flex;
@@ -26,27 +23,24 @@
             align-items: center;
         }
 
-        /* Container utama: Mewah dengan shadow dan border terang */
         .container {
             max-width: 900px;
             width: 90%;
-            background: rgba(26, 26, 26, 0.9); /* Hitam transparan */
+            background: rgba(26, 26, 26, 0.9);
             padding: 30px;
             border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 255, 255, 0.1); /* Shadow dengan glow terang */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 255, 255, 0.1);
             text-align: center;
         }
 
-        /* Header */
         h3 {
             font-size: 2rem;
             font-weight: 600;
-            color: #ffffff; /* Putih */
+            color: #ffffff;
             margin-bottom: 20px;
             text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
         }
 
-        /* Tabel styling */
         table {
             width: 100%;
             border-collapse: collapse;
@@ -59,26 +53,25 @@
         th, td {
             padding: 12px;
             text-align: center;
-            border: 1px solid #555; /* Border abu-abu terang */
+            border: 1px solid #ff69b4; /* Pink lembut */
         }
 
         th {
-            background: linear-gradient(45deg, #404040, #555); /* Gradien abu-abu terang untuk header */
+            background: linear-gradient(45deg, #404040, #ff69b4); /* Gradien abu-abu ke pink */
             color: #ffffff;
             font-weight: 600;
             text-transform: uppercase;
         }
 
         tr:nth-child(even) {
-            background: rgba(64, 64, 64, 0.5); /* Stripe abu-abu terang */
+            background: rgba(64, 64, 64, 0.5);
         }
 
         tr:hover {
-            background: rgba(128, 128, 128, 0.3); /* Hover terang */
+            background: rgba(255, 105, 180, 0.2); /* Pink transparan saat hover */
             transition: background 0.3s;
         }
 
-        /* Responsivitas: Scroll horizontal di layar kecil */
         @media (max-width: 768px) {
             .container {
                 padding: 20px;
