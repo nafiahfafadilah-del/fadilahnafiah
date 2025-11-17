@@ -2,146 +2,18 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Untuk responsivitas mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web | Portofolio Nafiah</title>
-    <!-- Menggunakan Google Fonts untuk font yang elegan dan mewah -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Reset dasar untuk konsistensi */
+        /* Reset dan box sizing untuk konsistensi */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Body dengan background gradien mewah: dari pink Blackpink ke hitam, dengan efek halus */
+        /* Body dengan background soft pink dan black yang lembut */
         body {
-            font-family: 'Poppins', sans-serif; /* Font elegan dan modern */
-            background: linear-gradient(135deg, #ff6b9d 0%, #c44569 50%, #000000 100%); /* Gradien pink ke hitam */
-            color: #ffffff; /* Teks putih untuk kontras */
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow-x: hidden; /* Mencegah scroll horizontal */
-        }
-
-        /* Container utama: Mewah dengan shadow, border radius, dan efek glow */
-        .container {
-            max-width: 900px;
-            width: 90%;
-            background: rgba(255, 255, 255, 0.1); /* Transparan untuk efek glassmorphism */
-            backdrop-filter: blur(10px); /* Efek blur untuk kesan mewah */
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px #ff6b9d; /* Shadow dengan glow pink */
-            text-align: center;
-            animation: fadeIn 1s ease-in-out; /* Animasi fade-in sederhana */
-        }
-
-        /* Animasi fade-in untuk container */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Header: Mewah dengan font besar dan efek text-shadow */
-        h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
-            margin-bottom: 10px;
-            color: #ff6b9d; /* Pink Blackpink */
-        }
-
-        h2 {
-            font-size: 1.5rem;
-            font-weight: 400;
-            margin-bottom: 20px;
-            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-        }
-
-        p {
-            font-size: 1.1rem;
-            font-weight: 300;
-            margin-bottom: 30px;
-            opacity: 0.9;
-        }
-
-        /* Menu Navigasi: Horizontal, dengan efek hover mewah */
-        .menu.pilihan ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-
-        .menu.pilihan li {
-            display: inline-block;
-        }
-
-        .menu.pilihan a {
-            display: inline-block;
-            padding: 12px 25px;
-            text-decoration: none;
-            color: #ffffff;
-            background: linear-gradient(45deg, #ff6b9d, #c44569); /* Gradien pink */
-            border-radius: 25px;
-            font-weight: 500;
-            font-size: 1rem;
-            transition: all 0.3s ease; /* Transisi halus */
-            box-shadow: 0 4px 15px rgba(255, 107, 157, 0.3);
-        }
-
-        .menu.pilihan a:hover {
-            background: linear-gradient(45deg, #c44569, #ff6b9d); /* Gradien terbalik */
-            transform: translateY(-5px); /* Efek lift */
-            box-shadow: 0 8px 25px rgba(255, 107, 157, 0.6); /* Glow lebih kuat */
-        }
-
-        /* Responsivitas: Menu vertikal di layar kecil */
-        @media (max-width: 768px) {
-            .container {
-                padding: 20px;
-            }
-            h1 {
-                font-size: 2rem;
-            }
-            h2 {
-                font-size: 1.2rem;
-            }
-            .menu.pilihan ul {
-                flex-direction: column;
-                align-items: center;
-            }
-            .menu.pilihan a {
-                width: 200px;
-                margin-bottom: 10px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <!-- Container utama -->
-    <div class="container">
-        <h1>Nafiah Web</h1>
-        <h2>Welcome to Profil Web Tugas</h2>
-        <p>There's a new kid here learning to code</p>
-
-        <!-- Menu Navigasi -->
-        <div class="menu pilihan">
-            <ul>
-                <li><a href="CRUD.html">CRUD</a></li>
-                <li><a href="BIODATA.html">BIODATA</a></li>
-                <li><a href="kata.html">Kata</a></li>
-                <li><a href="formating.html">Format Teks</a></li>
-                <li><a href="daftar.html">Daftar</a></li>
-                <li><a href="elementsemantik.html">Element Semantik</a></li>
-                <li><a href="TABEL.HTML">TABEL</a></li>
-                <li><a href="cobacss.html">Coba CSS</a></li>
-            </ul>
-        </div>
-    </div>
-</body>
-</html>
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f7ccd2 0%, #dba5ae 50%, #1
