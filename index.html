@@ -2,18 +2,93 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Web | Portofolio Nafiah</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>web | portofolio nafiah</title>
     <style>
-        /* Reset dan box sizing untuk konsistensi */
-        * {
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fce4ec; /* Pink soft */
+            color: #333333; /* Hitam gelap */
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
-
-        /* Body dengan background soft pink dan black yang lembut */
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #f7ccd2 0%, #dba5ae 50%, #1
+        .container {
+            max-width: 800px;
+            padding: 20px;
+            background-color: #ffffff; /* Putih untuk kontras */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Bayangan hitam lembut */
+            text-align: center;
+            border: 2px solid #ffb6c1; /* Border pink soft */
+        }
+        h1 {
+            color: #333333; /* Hitam gelap */
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #555555; /* Hitam lebih terang */
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #666666; /* Abu-abu gelap */
+            font-size: 1.1em;
+            margin-bottom: 30px;
+        }
+        .menu {
+            background-color: #ffb6c1; /* Pink soft */
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .menu ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .menu li {
+            margin: 10px;
+        }
+        .menu a {
+            color: #000000; /* Hitam */
+            text-decoration: none;
+            padding: 10px 15px;
+            border: 1px solid #000000;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .menu a:hover {
+            background-color: #000000;
+            color: #ffb6c1; /* Pink soft saat hover */
+        }
+    </style>
+</head>
+<body>
+    <!-- Container utama -->
+    <div class="container">
+        <h1>nafiah web</h1>
+        <h2>welcome to profil web tugas</h2>
+        <p>there's a new kid here learning to code</p>
+        <!-- Menu Navigasi -->
+        <div class="menu pilihan">
+            <ul>
+                <li><a href="CRUD.html">CRUD</a></li>
+                <li><a href="BIODATA.html">BIODATA</a></li>
+                <li><a href="kata.html">kata</a></li>
+                <li><a href="formating.html">format teks</a></li>
+                <li><a href="daftar.html">daftar</a></li>
+                <li><a href="elementsemantik.html">element semantik</a></li>
+                <li><a href="TABEL.HTML">TABEL</a></li>
+                <li><a href="cobacss.html">cobacss</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
