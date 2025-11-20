@@ -1,41 +1,119 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Belajar Javascript</title>
+    <title>Belajar Javascript - Login Siswa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FFF0F5; /* Soft pink background */
+            color: #FF69B4; /* Soft pink text */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #FFFFFF;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3);
+            width: 300px;
+            text-align: center;
+        }
+        h2 {
+            color: #FF1493; /* Deeper soft pink for heading */
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #FFB6C1;
+            border-radius: 5px;
+            box-sizing: border-box;
+            background-color: #FFF8F8;
+            color: #FF69B4;
+        }
+        input[type="text"]:focus, input[type="password"]:focus {
+            border-color: #FF1493;
+            outline: none;
+        }
+        button {
+            background-color: #FFB6C1;
+            color: #FFFFFF;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #FF69B4;
+        }
+        #hasil {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .success {
+            color: #32CD32; /* Green for success */
+        }
+        .error {
+            color: #FF4500; /* Red for error */
+        }
+    </style>
 </head>
 <body>
-    <h2>cek nama siswa</h2>
-	<form onsubmit="return cekLogin ()">
-	<label>Masukan Nama : </label><br>
-	<input type="text" id="user"><br><br>
-    <label>Masukan passwoard : </label><br>
-    <input type="text" id="pass"><br><br>
-    <button type="submit"> LOGIN </button>
-</form>
-
-<p id="hasil"></p>
+    <div class="container">
+        <h2>Cek Nama Siswa</h2>
+        <form id="loginForm">
+            <label for="user">Masukkan Nama:</label>
+            <input type="text" id="user" required>
+            
+            <label for="pass">Masukkan Password:</label>
+            <input type="password" id="pass" required>
+            
+            <button type="submit">LOGIN</button>
+        </form>
+        
+        <p id="hasil"></p>
+    </div>
 
     <script>
-        function cekLogin () {
-            var username1 = document.getElementById ("user").value;
-            var password1 = document.getElementById ("pass").value;
-
-            if (username1 == "admin" && password1 == "12345") {
-                document.getElementById("hasil").innerHTML =
-                "<span style='color:green;'>selamat anda berhasil login</span>";
-
-            } else {
-                document.getElementById ("hasil").innerHTML =
-                "<span style='color:red;'>maaf,nama tidak dikenal</span>";
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            
+            const username = document.getElementById('user').value.trim();
+            const password = document.getElementById('pass').value.trim();
+            const hasilElement = document.getElementById('hasil');
+            
+            // Clear previous messages
+            hasilElement.innerHTML = '';
+            hasilElement.className = '';
+            
+            // Validation: Check if fields are empty
+            if (username === '' || password === '') {
+                hasilElement.innerHTML = 'Nama dan password harus diisi!';
+                hasilElement.className = 'error';
+                return;
             }
-            return false; // cegah reload 
-        }
-     </script>
+            
+            // Check credentials (simulasi sederhana)
+            if (username === 'admin' && password === '12345') {
+                hasilElement.innerHTML = 'Selamat, Anda berhasil login!';
+                hasilElement.className = 'success';
+            } else {
+                hasilElement.innerHTML = 'Maaf, nama atau password tidak dikenal!';
+                hasilElement.className = 'error';
+            }
+        });
+    </script>
 </body>
 </html>
-	
-
-	    
-	
-
-	    
